@@ -4,12 +4,13 @@ import styles from '../styles/login.module.css'
 import {useMutation,gql} from '@apollo/client'
 import {ToastContainer,toast} from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
+import type { NextPage } from 'next'
 
 //@ts-ignore
 const notify = (toastMsg) => toast(toastMsg)
 
 const loginMutation = gql`
-  mutation login($loginEmail2: String!, $loginPassword2: String!){
+  mutation Login($loginEmail2: String!, $loginPassword2: String!){
   login(email: $loginEmail2, password: $loginPassword2) {
     token
     user {
@@ -21,7 +22,7 @@ const loginMutation = gql`
 
 
 
-function login() {
+const Login: NextPage =() => {
   const [inputs,setInputs] = useState({
     email:'',
     password:''
@@ -36,7 +37,7 @@ function login() {
   .then(res => {
     localStorage.setItem('token',res.data.login.token )
     localStorage.setItem('user',res.data.login.user.name )
-    location.href ='/dashboard'
+    location.href ='/Dashboard'
     console.log(res)
   })
   .catch(e => notify(e.message))
@@ -44,7 +45,7 @@ function login() {
 
   return (
     <>
-        <HomepageNavBar option='signup'/>
+        <HomepageNavBar option='Signup'/>
         <ToastContainer />
         <div className={styles.container}>
             <div className={styles.main}>
@@ -60,4 +61,4 @@ function login() {
   )
 }
 
-export default login
+export default Login

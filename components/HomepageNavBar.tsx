@@ -9,7 +9,7 @@ const HomepageNavBar = ({option})=> {
             <Link href='/'>
               <h4 className={styles.h4}>FLASHY</h4>
             </Link>
-            <Link href={`/${option !== 'logout' ? option : 'login'}`}>
+            <Link href={`/${option !== 'logout' ? option : 'Login'}`}>
               <button className={styles.button}>{option}</button>
             </Link>
         </div>

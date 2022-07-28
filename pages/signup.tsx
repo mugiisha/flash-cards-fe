@@ -18,7 +18,7 @@ const signupMutation = gql`
 `//@ts-ignore
 const notify = (toastMsg) => toast(toastMsg)
 
-function signup() {
+function Signup() {
   const [inputs,setInputs] = useState({
     name:'',
     email:'',
@@ -49,7 +49,7 @@ function signup() {
 
   return (
     <>
-        <HomepageNavBar option='login'/>
+        <HomepageNavBar option='Login'/>
         <ToastContainer />
         <div className={styles.container}>
             <div className={styles.main}>
@@ -66,4 +66,4 @@ function signup() {
   )
 }
 
-export default signup
+export default Signup

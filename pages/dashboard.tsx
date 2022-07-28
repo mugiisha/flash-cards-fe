@@ -4,10 +4,11 @@ import styles from '../styles/dashboard.module.css'
 import DashboardCardList from '../components/DashboardCardList'
 import { client } from '../apollo'
 import { gql } from '@apollo/client';
+import type { NextPage } from 'next'
 
 
 //@ts-ignore
-function dashboard({data}) {
+const Dashboard: NextPage =({data}) =>{
     const[updateMode,setUpdateMode] = useState(false)
   return (
     <>
@@ -67,4 +68,4 @@ export async function getStaticProps() {
   }
   
 
-export default dashboard
+export default Dashboard

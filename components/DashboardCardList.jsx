@@ -10,7 +10,6 @@ function DashboardCardList({setUpdateMode,data}) {
    }
  },[currentUser])
   
- console.log(currentUser)
   const created = data.quizes.filter(item => item.postedBy.name === currentUser)
   const numberOfCreated = created.length
   return ( 

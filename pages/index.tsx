@@ -9,12 +9,13 @@ import { client } from '../apollo'
 
 //@ts-ignore
 const Home: NextPage = ({data}) => {
+
   return (
     <div className={styles.container}>
       <Head>
         <title>Flash cards app</title>
       </Head>
-        <HomepageNavBar option='login'/>
+        <HomepageNavBar option='Login'/>
       <h4 className={styles.welcome}>Make a guess before flipping</h4>
       <CardsList data={data}/>
     </div>
