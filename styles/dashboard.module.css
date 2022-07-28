@@ -1,0 +1,45 @@
+.main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.form{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 40%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding:4rem
+}
+
+.input {
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.button{
+    padding: 0.3rem 2rem;
+    background-color: #112240;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin: 5px;
+    border-radius: 6px;
+}
+.deleteBtn{
+    padding: 0.3rem 2rem;
+    background-color: #112240;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin: 5px;
+    border-radius: 6px;
+    background-color: rgb(173, 56, 56);
+}

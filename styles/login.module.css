@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+}
+
+.main{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding:5rem
+}
+.input {
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.login{
+    padding: 0.3rem 2rem;
+    background-color: #112240;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
