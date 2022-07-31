@@ -1,6 +1,6 @@
 import { ApolloClient,InMemoryCache,HttpLink} from "@apollo/client";
 
-const url = 'https://flash-cards-be.herokuapp.com/'
+const url = 'https://flash-cards-be.herokuapp.com/graphql'
 
 export const graphqlClient = new ApolloClient({
     link:new HttpLink({

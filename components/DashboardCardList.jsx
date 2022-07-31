@@ -6,7 +6,7 @@ import {useSelector} from 'react-redux'
 function DashboardCardList({setUpdateMode,setCurrentQ}) {
   const data= useSelector(state => state?.quizes?.quizes)
  const [currentUser,setCurrentUser] = useState('')
-console.log(data)
+
  useEffect(() => {
      setCurrentUser(localStorage.getItem('user'))
  },[currentUser])

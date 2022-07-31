@@ -12,24 +12,23 @@ import { getQuizes } from '../store/features/quizes'
 import { useEffect } from 'react'
 
 //@ts-ignore
-const Home: NextPage = ({data}) => {
+const Home: NextPage = ({}) => {
   const dispatch=useDispatch()
 
  
   //@ts-ignore
-  // const data = useSelector(state => state?.quizes?.quizes)
-
+  const data = useSelector(state => state?.quizes?.quizes)
 
   //@ts-ignore
-  // useEffect(() => {
-  //   const getQuizesfn = async() => {
-  //     const {data}= await graphqlClient.query({
-  //       query:getAllQuizes
-  //     })
-  //     dispatch(getQuizes(data.quizes))
-  //   }
-  //   getQuizesfn()
-  // }, [data])
+  useEffect(() => {
+    const getQuizesfn = async() => {
+      const {data}= await graphqlClient.query({
+        query:getAllQuizes
+      })
+      dispatch(getQuizes(data.quizes))
+    }
+    getQuizesfn()
+  }, [])
 
   return (
     <div className={styles.container}>

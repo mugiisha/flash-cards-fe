@@ -8,7 +8,6 @@ function DashboardCard({setUpdateMode,item,setCurrentQ}) {
       question:item?.question,
       answer:item?.answer
     })
-    console.log(item)
     setUpdateMode(mode => !mode)
   }
   return (

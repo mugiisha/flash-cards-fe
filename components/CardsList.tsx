@@ -8,7 +8,7 @@ function CardsList({data}) {
     <div className={styles.container}>
       {
       data.map(quiz => <FlashCard quiz={quiz} key={quiz.id}/>)
-      }
+    }
     </div>
   )
 }
