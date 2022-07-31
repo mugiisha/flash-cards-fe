@@ -41,14 +41,14 @@ const Login: NextPage =() => {
   .then(res => {
     localStorage.setItem('token',res.data.login.token )
     localStorage.setItem('user',res.data.login.user.name )
-    location.href ='/Dashboard'
+    location.href ='/dashboard'
   })
   .catch(e => notify(e.message))
   }
 
   return (
     <>
-        <HomepageNavBar option='Signup'/>
+        <HomepageNavBar option='signup'/>
         <ToastContainer />
         <div className={styles.container}>
             <div className={styles.main}>

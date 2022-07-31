@@ -35,7 +35,7 @@ const Home: NextPage = ({}) => {
       <Head>
         <title>Flash cards app</title>
       </Head>
-        <HomepageNavBar option='Login'/>
+        <HomepageNavBar option='login'/>
         <div className={styles.div}>
           <h4 className={styles.welcome}><span className={styles.span}>Make a guess 🤔</span> <br /> before a flip 😉</h4>
         </div>
