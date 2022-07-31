@@ -2,7 +2,6 @@ import React from 'react'
 import styles from '../styles/homepagenavbar.module.css'
 import Link from 'next/link'
 
-//@ts-ignore
 const HomepageNavBar = ({option})=> {
   return (
         <div id={styles.nav}>

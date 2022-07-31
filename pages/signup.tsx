@@ -15,7 +15,7 @@ const signupMutation = gql`
     token
   }
 }
-`//@ts-ignore
+`
 const notify = (toastMsg) => toast(toastMsg)
 
 function Signup() {
@@ -25,7 +25,7 @@ function Signup() {
     password:''
   })
   const [logger,{data,loading,error}] = useMutation(signupMutation)
-  //@ts-ignore
+
   const handleSignUp = (e) => {
     e.preventDefault()
     e.preventDefault()

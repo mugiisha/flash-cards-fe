@@ -1,7 +1,6 @@
 import React ,{useState}from 'react'
 import styles from '../styles/flashcard.module.css'
 
-//@ts-ignore
 const FlashCard = ({quiz}) => {
   return (
     <div className={styles.card}>

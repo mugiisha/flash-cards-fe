@@ -6,7 +6,7 @@ import {ToastContainer,toast} from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
 import type { NextPage } from 'next'
 
-//@ts-ignore
+
 const notify = (toastMsg) => toast(toastMsg)
 
 const loginMutation = gql`
@@ -29,10 +29,14 @@ const Login: NextPage =() => {
   })
 
   const [logger,{data,loading,error}] = useMutation(loginMutation)
-//@ts-ignore
+
   const handleLogin = async(e) => {
     e.preventDefault()
-    console.log(inputs)
+    if(!(inputs.email && inputs.password)){
+      notify('enter your credentials')
+      return
+    }
+
   logger({variables:{loginEmail2:inputs.email,loginPassword2:inputs.password}})
   .then(res => {
     localStorage.setItem('token',res.data.login.token )

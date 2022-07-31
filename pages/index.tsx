@@ -5,10 +5,31 @@ import styles from '../styles/Home.module.css'
 import HomepageNavBar from '../components/HomepageNavBar'
 import CardsList from '../components/CardsList'
 import { gql } from '@apollo/client';
-import { client } from '../apollo'
+import { useSelector ,useDispatch} from 'react-redux'
+import { graphqlClient } from '../apollo'
+import { getAllQuizes } from '../utils/querries'
+import { getQuizes } from '../store/features/quizes'
+import { useEffect } from 'react'
 
 //@ts-ignore
-const Home: NextPage = ({data}) => {
+const Home: NextPage = ({}) => {
+  const dispatch=useDispatch()
+
+ 
+  //@ts-ignore
+  const data = useSelector(state => state?.quizes?.quizes)
+
+
+  //@ts-ignore
+  useEffect(() => {
+    const getQuizesfn = async() => {
+      const {data}= await graphqlClient.query({
+        query:getAllQuizes
+      })
+      dispatch(getQuizes(data.quizes))
+    }
+    getQuizesfn()
+  }, [data])
 
   return (
     <div className={styles.container}>
@@ -22,7 +43,8 @@ const Home: NextPage = ({data}) => {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
+  const client = graphqlClient
   const {data}= await client.query({
     query: gql`
       query getAllQuizes{
