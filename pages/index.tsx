@@ -36,8 +36,10 @@ const Home: NextPage = ({}) => {
         <title>Flash cards app</title>
       </Head>
         <HomepageNavBar option='Login'/>
-      <h4 className={styles.welcome}>Make a guess before flipping</h4>
-      <CardsList data={data}/>
+        <div className={styles.div}>
+          <h4 className={styles.welcome}><span className={styles.span}>Make a guess 🤔</span> <br /> before a flip 😉</h4>
+        </div>
+        {data.length > 0 ? <CardsList data={data}/> : <h3 className={styles.wait}>Wait a sec...</h3>}
     </div>
   )
 }

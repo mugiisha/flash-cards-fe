@@ -1,5 +1,7 @@
 .container {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
@@ -11,9 +13,18 @@
   justify-content: center;
   align-items: center;
 }
+.wait{
+  text-align: center;
+}
+
 .welcome {
   text-align: center;
   color: #112240;
+  font-size: large;
+}
+.span{
+  color:rgb(201, 102, 102);
+ font-size: 1.5em;
 }
 
 .footer {
@@ -60,22 +71,6 @@
   font-size: 1.5rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
 
 .card {
   margin: 1rem;
