@@ -42,7 +42,6 @@ const Login: NextPage =() => {
     localStorage.setItem('token',res.data.login.token )
     localStorage.setItem('user',res.data.login.user.name )
     location.href ='/Dashboard'
-    console.log(res)
   })
   .catch(e => notify(e.message))
   }

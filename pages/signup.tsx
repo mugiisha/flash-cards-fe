@@ -29,13 +29,11 @@ function Signup() {
   const handleSignUp = (e) => {
     e.preventDefault()
     e.preventDefault()
-    console.log(inputs)
   logger({variables:{email:inputs.email,password:inputs.password,name:inputs.name}})
   .then(res => {
     localStorage.setItem('token',res.data.signup.token )
     localStorage.setItem('user',res.data.signup.user.name )
     location.href ='/dashboard'
-    console.log(res)
   })
   .catch(e =>{
     if(e.message.includes('Invalid')){
@@ -49,7 +47,7 @@ function Signup() {
 
   return (
     <>
-        <HomepageNavBar option='Login'/>
+        <HomepageNavBar option='login'/>
         <ToastContainer />
         <div className={styles.container}>
             <div className={styles.main}>

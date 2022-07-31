@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import HomepageNavBar from '../components/HomepageNavBar'
-import styles from '../styles/dashboard.module.css'
+import styles from '../styles/dashboardStyle.module.css'
 import DashboardCardList from '../components/DashboardCardList'
 import { graphqlClient} from '../apollo'
 import {useMutation,gql,useQuery} from '@apollo/client'
@@ -22,13 +22,6 @@ const notify = (toastMsg) => toast(toastMsg)
 const Dashboard: NextPage =() => {
   const dispatch = useDispatch()
   ///@ts-ignore
-
-  const getQuizesfn = async() => {
-    const {data}= await graphqlClient.query({
-      query:getAllQuizes
-    })
-    dispatch(getQuizes(data.quizes))
-  }
  
 
   const[updateMode,setUpdateMode] = useState(false)
@@ -94,6 +87,13 @@ const Dashboard: NextPage =() => {
 
   useEffect(() => {
     setToken(localStorage.getItem('token'))
+    
+  const getQuizesfn = async() => {
+    const {data}= await graphqlClient.query({
+      query:getAllQuizes
+    })
+    dispatch(getQuizes(data.quizes))
+  }
     getQuizesfn()
     //@ts-ignore
   },[token])
