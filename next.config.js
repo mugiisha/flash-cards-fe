@@ -7,7 +7,7 @@ const withNextEnv = nextEnv()
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
 }
 
