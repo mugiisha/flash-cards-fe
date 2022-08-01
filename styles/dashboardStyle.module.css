@@ -44,3 +44,12 @@
     border-radius: 6px;
     background-color: rgb(173, 56, 56);
 }
+
+@media screen and (max-width: 640px){
+    .form{
+        width: 80%;
+    }
+    .input{
+        padding: .5em .7em;
+    }
+}
