@@ -28,3 +28,12 @@
     cursor: pointer;
     border-radius: 6px;
 }
+
+@media screen and (max-width: 640px){
+    .main{
+        width: 80%;
+    }
+    .input{
+        padding: .5em .7em;
+    }
+}
